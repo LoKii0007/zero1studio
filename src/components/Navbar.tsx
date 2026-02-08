@@ -11,7 +11,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Expertise", href: "#services" },
     { name: "Selected Work", href: "#projects" },
-    { name: "Investment", href: "#pricing" },
+    { name: "Start Project", href: "#pricing" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -44,12 +44,17 @@ export default function Navbar() {
              </button>
         </Magnetic>
         
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-8">
              <Magnetic>
-                <a href="#contact" className="px-6 py-3 border border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all" data-hover="true">
-                    Start Project
+                <a href="https://calendly.com" target="_blank" className="text-xs uppercase tracking-widest font-bold hover:text-accent transition-colors" data-hover="true">
+                    Book a Call
                 </a>
              </Magnetic>
+             {/* <Magnetic>
+                <a href="#contact" className="px-6 py-3 border border-white/20 rounded-full text-xs uppercase tracking-widest hover:bg-accent hover:text-black hover:border-accent transition-all" data-hover="true">
+                    Start Project
+                </a>
+             </Magnetic> */}
         </div>
       </nav>
 
@@ -59,7 +64,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-black flex flex-col justify-center items-center"
+            className="fixed inset-0 z-[60] bg-black flex flex-col justify-center items-center px-6"
           >
              <button 
                 onClick={() => setIsMenuOpen(false)}
@@ -69,21 +74,44 @@ export default function Navbar() {
                 <X size={32} />
              </button>
 
-             <div className="flex flex-col items-center gap-6">
-                {navLinks.map((link, i) => (
-                    <motion.a
-                        key={link.name}
-                        href={link.href}
-                        initial={{ y: 50, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: i * 0.1 }}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="font-display text-5xl md:text-7xl font-bold text-transparent text-outline hover:text-white hover:text-outline-none transition-colors duration-500"
-                        data-hover="true"
+             <div className="flex flex-col items-center gap-8 w-full max-w-md">
+                <div className="flex flex-col items-center gap-6">
+                    {navLinks.map((link, i) => (
+                        <motion.a
+                            key={link.name}
+                            href={link.href}
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: i * 0.1 }}
+                            onClick={() => setIsMenuOpen(false)}
+                            className="font-display text-4xl sm:text-6xl md:text-7xl font-bold text-transparent text-outline hover:text-white hover:text-outline-none transition-colors duration-500 text-center"
+                            data-hover="true"
+                        >
+                            {link.name}
+                        </motion.a>
+                    ))}
+                </div>
+
+                {/* <motion.div 
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5 }}
+                    className="flex flex-col items-center gap-6 mt-8 w-full"
+                >
+                    <a
+                        href="https://calendly.com"
+                        className="text-accent text-lg uppercase tracking-widest font-bold hover:text-white transition-colors"
                     >
-                        {link.name}
-                    </motion.a>
-                ))}
+                        Book a Call
+                    </a>
+                    <a 
+                        href="#contact" 
+                        onClick={() => setIsMenuOpen(false)}
+                        className="w-full text-center px-8 py-4 border border-white/20 rounded-full text-sm uppercase tracking-widest hover:bg-accent hover:text-black hover:border-accent transition-all"
+                    >
+                        Start Project
+                    </a>
+                </motion.div> */}
              </div>
           </motion.div>
         )}
