@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Magnetic from "./Magnetic";
@@ -8,30 +8,46 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 gsap.registerPlugin(ScrollTrigger);
+
+const navLinks = [
+  { name: "Expertise", href: "services" },
+  { name: "Selected Work", href: "projects" },
+  { name: "Start Project", href: "pricing" },
+  { name: "Contact", href: "contact" },
+];
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const navLinks = [
-    { name: "Expertise", href: "#services" },
-    { name: "Selected Work", href: "#projects" },
-    { name: "Start Project", href: "#pricing" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-
-  useGSAP(() => {
-    gsap.to(".navbar", {
-      mixBlendMode: "difference",
-      scrollTrigger: {
-        trigger: ".pricing-section",
-        start: "bottom top",
-        end: "+=80px",
-        scrub: true,
+  const handleLinkClick = useCallback((href: string) => {
+    if (pathname !== "/") {
+      router.push("/#" + href);
+    } else {
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
       }
-    })
-  })
+      window.scrollTo({
+        top: document.getElementById(href)?.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  }, [pathname, router, isMenuOpen]);
+
+  // useGSAP(() => {
+  //   gsap.to(".navbar", {
+  //     mixBlendMode: "difference",
+  //     scrollTrigger: {
+  //       trigger: ".pricing-section",
+  //       start: "bottom top",
+  //       end: "+=80px",
+  //       scrub: true,
+  //     }
+  //   })
+  // }, [pathname, router])
 
   return (
     <>
@@ -47,14 +63,14 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-12">
           {navLinks.slice(0, 3).map((link) => (
             <Magnetic key={link.name}>
-              <Link
-                href={link.href}
+              <div
+                onClick={() => handleLinkClick(link.href)}
                 className="text-sm uppercase tracking-widest font-medium hover:text-accent transition-colors relative group"
                 data-hover="true"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              </div>
             </Magnetic>
           ))}
         </div>

@@ -6,6 +6,14 @@ import Magnetic from "./Magnetic";
 
 const projects = [
     {
+        title: "Enipp",
+        category: "Web Development / WebXR",
+        year: "2024",
+        image: "/images/enipp.png",
+        link: "https://enipp.com",
+        color: "from-fuchsia-500/20 to-pink-500/20"
+    },
+    {
         title: "Friends Of The Future",
         category: "Web Development",
         year: "2024",
@@ -22,17 +30,11 @@ const projects = [
         color: "from-teal-500/20 to-emerald-500/20"
     },
     {
-        title: "Vortex AI",
-        category: "AI Platform",
-        year: "2024",
-        image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2565&auto=format&fit=crop",
-        color: "from-fuchsia-500/20 to-pink-500/20"
-    },
-    {
-        title: "Cyber Flow",
-        category: "Security",
-        year: "2023",
-        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop",
+        title: "Muse Ink",
+        category: "Web Development",
+        year: "2025",
+        image: "/images/museink.png",
+        link: "https://muse-landing-page-next.vercel.app/",
         color: "from-red-500/20 to-orange-500/20"
     },
 ];
@@ -93,7 +95,7 @@ export default function Projects() {
                             <div className={`absolute inset-0 bg-gradient-to-b ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
 
-                            <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                            <div className="absolute inset-0 md:p-8 p-4 flex flex-col justify-between">
                                 <div className="flex justify-between items-start opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -translate-y-4 group-hover:translate-y-0">
                                     <span className="px-3 py-1 rounded-full border border-white/20 bg-black/50 backdrop-blur-md text-xs uppercase tracking-widest text-white">
                                         {project.year}

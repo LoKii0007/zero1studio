@@ -20,7 +20,7 @@ export default function Footer() {
             }
         });
         tl.to(".footer-text", {
-            y: "35%",
+            y: "30%",
             duration: 2.5,
         })
         tl.to(".footer-text-1", {
@@ -44,8 +44,8 @@ export default function Footer() {
                         </h2>
                         <div className="flex flex-col gap-2">
                             <p className="font-bold text-sm md:text-xl uppercase tracking-wider">Start a project</p>
-                            <a href="mailto:hello@zero1.studio" className="font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
-                                hello@zero1.studio
+                            <a href="mailto:hello@zero1studio.xyz" className="font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
+                                hello@zero1studio.xyz
                             </a>
                         </div>
                     </div>

@@ -26,8 +26,17 @@ export const metadata: Metadata = {
   description:
     "Zero1 Studio – Expert website development company building high-performance MVPs, interactive 3D web experiences, custom e-commerce sites, and intelligent web solutions. From idea to launch – fast, scalable, and conversion-focused.",
   keywords: [
+    "zero1studio.xyz",
     "zero1studio",
     "zero1 studio",
+    "zero1 studio xyz",
+    "zero1 studio website development",
+    "zero1 studio mvp development",
+    "zero1 studio 3d web experience",
+    "zero1 studio ecommerce development",
+    "zero1 studio web development company",
+    "zero1 studio startup mvp",
+    "zero1 studio next.js development",
     "website development",
     "web development company",
     "mvp development",
@@ -42,7 +51,7 @@ export const metadata: Metadata = {
     "web application development",
     "startup mvp",
   ],
-  authors: [{ name: "Zero1 Studio", url: "https://zero1studio.lok1.dev" }],
+  authors: [{ name: "Zero1 Studio", url: "https://zero1studio.xyz" }],
   creator: "Zero1 Studio",
   publisher: "Zero1 Studio",
   formatDetection: {
@@ -50,7 +59,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://zero1studio.lok1.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://zero1studio.xyz"),
   alternates: {
     canonical: "/",
   },

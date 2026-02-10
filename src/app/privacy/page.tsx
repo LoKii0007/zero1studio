@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-white/60 text-sm font-light">
-              Last updated: February 2025
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}
             </p>
           </motion.header>
 
@@ -104,10 +104,10 @@ export default function PrivacyPage() {
               <p className="text-white/60 font-light leading-relaxed">
                 For privacy-related questions or requests, contact us at{" "}
                 <a
-                  href="mailto:hello@zero1.studio"
+                  href="mailto:hello@zero1studio.xyz"
                   className="text-accent hover:text-accent/80 transition-colors underline underline-offset-2"
                 >
-                  hello@zero1.studio
+                  hello@zero1studio.xyz
                 </a>
                 .
               </p>

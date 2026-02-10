@@ -116,7 +116,7 @@ export default function Hero() {
             className="flex justify-between items-start border-b border-white/10 pb-4"
          >
              <div className="flex flex-col">
-                <span className="text-[10px] font-mono text-accent mb-1">EST. 2024</span>
+                <span className="text-[10px] font-mono text-accent mb-1">EST. 2025</span>
                 <span className="text-[10px] font-mono text-white/70 uppercase tracking-widest">Global<br/>Independent</span>
              </div>
              <span className="text-[10px] font-mono text-white/50 text-right uppercase tracking-widest">Digital<br/>Experience</span>

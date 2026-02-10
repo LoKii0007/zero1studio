@@ -24,7 +24,7 @@ export default function LegalPage() {
               Legal
             </h1>
             <p className="text-white/60 text-sm font-light">
-              Terms of service &amp; legal notice · Last updated: February 2025
+              Terms of service &amp; legal notice · Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
             </p>
           </motion.header>
 
@@ -89,10 +89,10 @@ export default function LegalPage() {
               <p className="text-white/60 font-light leading-relaxed">
                 For legal inquiries:{" "}
                 <a
-                  href="mailto:hello@zero1.studio"
+                  href="mailto:hello@zero1studio.xyz"
                   className="text-accent hover:text-accent/80 transition-colors underline underline-offset-2"
                 >
-                  hello@zero1.studio
+                  hello@zero1studio.xyz
                 </a>
                 . For privacy matters, see our{" "}
                 <Link
