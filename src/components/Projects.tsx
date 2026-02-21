@@ -26,7 +26,7 @@ const projects = [
     category: "Saas / AI",
     year: "2026",
     image: "/images/promptboard.png",
-    link: "https://promptboard.lok1.dev",
+    link: "https://promptboard.zero1studio.xyz",
     color: "from-teal-500/20 to-emerald-500/20",
   },
   {
