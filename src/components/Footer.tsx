@@ -44,14 +44,14 @@ export default function Footer() {
                         </h2>
                         <div className="flex flex-col gap-2">
                             <p className="font-bold text-sm md:text-xl uppercase tracking-wider">Start a project</p>
-                            <a href="mailto:hello@zero1studio.xyz" className="font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
-                                hello@zero1studio.xyz
+                            <a href="mailto:lokeshyadv8177@gmail.com" className="font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
+                                lokeshyadv8177@gmail.com
                             </a>
                         </div>
                     </div>
 
                     <div className="flex flex-col justify-start md:justify-end items-start md:items-end gap-6 md:gap-8">
-                        <div className="flex flex-wrap gap-3 md:gap-4">
+                        {/* <div className="flex flex-wrap gap-3 md:gap-4">
                             {['Instagram', 'Twitter', 'LinkedIn'].map((social) => (
                                 <Magnetic key={social}>
                                     <a href="#" className="px-4 py-2 md:px-6 md:py-3 border border-black/10 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-colors" data-hover="true">
@@ -59,7 +59,7 @@ export default function Footer() {
                                     </a>
                                 </Magnetic>
                             ))}
-                        </div>
+                        </div> */}
                         <div className="text-left md:text-right">
                             <p className="font-bold text-base md:text-lg uppercase">Zero1 Studio</p>
                             <p className="opacity-60 text-sm md:text-base">Design & Engineering</p>
