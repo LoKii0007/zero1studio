@@ -15,8 +15,15 @@ export default function CustomCursor() {
   const cursorYSpring = useSpring(cursorY, { damping: 25, stiffness: 700 });
 
   useEffect(() => {
-    const finePointer = window.matchMedia("(pointer: fine)").matches;
-    setEnabled(finePointer && !prefersReducedMotion);
+    const media = window.matchMedia("(pointer: fine) and (min-width: 768px)");
+
+    const updateEnabled = () => {
+      setEnabled(media.matches && !prefersReducedMotion);
+    };
+
+    updateEnabled();
+    media.addEventListener("change", updateEnabled);
+    return () => media.removeEventListener("change", updateEnabled);
   }, [prefersReducedMotion]);
 
   useEffect(() => {

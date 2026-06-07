@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="fixed navbar top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 md:py-8 grid grid-cols-3 items-center text-white backdrop-blur-md"
+        className="fixed navbar top-0 left-0 right-0 z-50 px-6 py-6 md:px-12 md:py-8 flex justify-between items-center text-white backdrop-blur-md"
         aria-label="Main"
       >
           <div className="justify-self-start">
@@ -49,7 +49,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          <div className="justify-self-end flex items-center">
+          <div className="justify-end flex items-end">
             <Magnetic>
               <button
                 type="button"

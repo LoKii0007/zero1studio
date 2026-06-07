@@ -31,7 +31,7 @@ export const projects: Project[] = [
     category: "Web Development",
     year: "2025",
     image: "/images/museink.png",
-    link: "https://muse-landing-page-next.vercel.app/",
+    link: "https://museink.zero1studio.xyz/",
     description:
       "Editorial landing experience for a creative studio — motion, typography, and conversion-focused layout.",
   },

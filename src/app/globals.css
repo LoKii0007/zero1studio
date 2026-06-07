@@ -29,7 +29,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-@media (pointer: fine) {
+@media (pointer: fine) and (min-width: 768px) {
   body {
     cursor: none;
   }
