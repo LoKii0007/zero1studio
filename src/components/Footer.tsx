@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { CalendarIcon } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
@@ -37,34 +38,20 @@ export default function Footer() {
             style={{ clipPath: "polygon(0% 0, 100% 0, 100% 100%, 0 100%)" }}
         >
             <div className="max-w-[90rem] mx-auto w-full h-full flex flex-col justify-between">
-                <div className="grid md:grid-cols-2 gap-8 md:gap-16">
-                    <div>
+                <div className="grid md:grid-cols-2 gap-8 md:gap-16 h-full">
+                    <div className="flex flex-col h-full justify-center md:justify-evenly">
                         <h2 className="font-display text-5xl sm:text-7xl md:text-9xl font-bold uppercase leading-[0.8] mb-8 md:mb-12 tracking-tighter">
                             Let's <br /> Create
                         </h2>
                         <div className="flex flex-col gap-2">
-                            <p className="font-bold text-sm md:text-xl uppercase tracking-wider">Start a project</p>
-                            <a href="mailto:lokeshyadv8177@gmail.com" className="font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
-                                lokeshyadv8177@gmail.com
+                            {/* <p className="font-bold text-sm md:text-xl uppercase tracking-wider">Start a project</p> */}
+                            <a href="https://cal.com/zero1studio" target="_blank" rel="noopener noreferrer" className="bg-black text-white p-4 flex items-center gap-4 justify-center rounded-full font-display text-2xl sm:text-4xl md:text-5xl font-bold hover:opacity-50 transition-opacity break-words" data-hover="true">
+                                <CalendarIcon className="w-8 h-8" />
+                                Book a call
                             </a>
                         </div>
                     </div>
 
-                    <div className="flex flex-col justify-start md:justify-end items-start md:items-end gap-6 md:gap-8">
-                        {/* <div className="flex flex-wrap gap-3 md:gap-4">
-                            {['Instagram', 'Twitter', 'LinkedIn'].map((social) => (
-                                <Magnetic key={social}>
-                                    <a href="#" className="px-4 py-2 md:px-6 md:py-3 border border-black/10 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-colors" data-hover="true">
-                                        {social}
-                                    </a>
-                                </Magnetic>
-                            ))}
-                        </div> */}
-                        <div className="text-left md:text-right">
-                            <p className="font-bold text-base md:text-lg uppercase">Zero1 Studio</p>
-                            <p className="opacity-60 text-sm md:text-base">Design & Engineering</p>
-                        </div>
-                    </div>
                 </div>
 
                 <div className="flex flex-row justify-between items-end border-t border-black/10 pt-4 md:pt-8 gap-4 md:gap-0">
