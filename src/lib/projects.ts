@@ -27,6 +27,15 @@ export const projects: Project[] = [
       "Community-driven site for a creative collective — fast, accessible, and tuned for events and storytelling.",
   },
   {
+    title: "Homie",
+    category: "Web Development / Web Design",
+    year: "2026",
+    image: "/images/homie.png",
+    link: "https://homie.zero1studio.xyz",
+    description:
+      "High-fidelity mockup — UI design and front-end development for a property platform concept, focused on layout, visuals, and brand presentation.",
+  },
+  {
     title: "Muse Ink",
     category: "Web Development",
     year: "2025",
