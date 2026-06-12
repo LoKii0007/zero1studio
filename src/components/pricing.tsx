@@ -22,7 +22,7 @@ export default function Pricing() {
 
   const tabs = [
     { id: "web", label: "Web Development" },
-    { id: "chatbot", label: "Chatbot Creation" },
+    { id: "chatbot", label: "Conversational AI" },
   ];
 
   const pricingData: PricingData = {

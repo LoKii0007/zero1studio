@@ -18,7 +18,7 @@ const services = [
   },
   {
     id: "02",
-    title: "Chatbot Creation",
+    title: "Conversational AI",
     desc: "Intelligent AI agents that automate support and sales. 24/7 customer engagement with custom LLM integration.",
     bg: "bg-[#0d0d0d]",
     icon: Asterisk

@@ -70,7 +70,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center">
               <Magnetic>
                 <Link
-                  href="https://calendly.com/lokeshyadv8177/30min"
+                  href="https://cal.com/zero1studio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs uppercase tracking-widest font-bold hover:text-accent transition-colors whitespace-nowrap focus-ring rounded-sm"

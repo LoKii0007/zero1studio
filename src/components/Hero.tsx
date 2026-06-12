@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, useScroll, useTransform, Variants } from "framer-motion";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import Magnetic from "./Magnetic";
 
 export default function Hero() {

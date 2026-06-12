@@ -4,9 +4,9 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zero1studio.xyz",
   description:
     "Zero1 Studio builds high-performance websites, startup MVPs, interactive 3D web experiences, and conversion-focused e-commerce platforms.",
-  email: "hello@zero1studio.xyz",
+  email: "lokeshyadv8177@gmail.com",
   locale: "en_US",
-  twitter: "@pixelflowui",
+  // twitter: "@zer",
   ogImage: "/og-image.jpg",
 } as const;
 
