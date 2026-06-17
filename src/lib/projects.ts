@@ -5,6 +5,7 @@ export type Project = {
   image: string;
   link: string;
   description: string;
+  isCompleted: boolean
 };
 
 export const projects: Project[] = [
@@ -14,6 +15,7 @@ export const projects: Project[] = [
     year: "2026",
     image: "/images/dwello.png",
     link: "https://dwello.zero1studio.xyz",
+    isCompleted: true,
     description:
       "High-fidelity mockup — UI design and front-end development for a property platform concept, focused on layout, visuals, and brand presentation.",
   },
@@ -21,13 +23,26 @@ export const projects: Project[] = [
     title: "Friends Of The Future",
     category: "Web Development",
     year: "2024",
+    isCompleted: true,
     image: "/images/fotf.png",
     link: "https://fotf-frontend.vercel.app",
     description:
       "Community-driven site for a creative collective — fast, accessible, and tuned for events and storytelling.",
   },
   {
+    title: "Stocklit",
+    category: "Web Development / Web Design",
+    year: "202+6",
+    isCompleted: false,
+    image: "/images/stocklit.png",
+    link: "https://stocklit.zero1studio.xyz",
+    description:
+      "Community-driven site for a creative collective — fast, accessible, and tuned for events and storytelling.",
+  },
+  {
     title: "Homie",
+    isCompleted: true,
+
     category: "Web Development / Web Design",
     year: "2026",
     image: "/images/homie.png",
@@ -37,6 +52,8 @@ export const projects: Project[] = [
   },
   {
     title: "Muse Ink",
+    isCompleted: true,
+
     category: "Web Development",
     year: "2025",
     image: "/images/museink.png",
@@ -46,6 +63,8 @@ export const projects: Project[] = [
   },
   {
     title: "Promptboard",
+    isCompleted: true,
+
     category: "Saas / Web Development / Web Design",
     year: "2026",
     image: "/images/promptboard.png",
@@ -55,6 +74,8 @@ export const projects: Project[] = [
   },
   {
     title: "Enipp",
+    isCompleted: true,
+
     category: "Web Development / WebXR",
     year: "2024",
     image: "/images/enipp.png",

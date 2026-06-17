@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import ProjectImage from "@/components/project-image";
+import ProjectInProgressBadge from "@/components/project-in-progress-badge";
 import { projects } from "@/lib/projects";
 import { usePrefersReducedMotion } from "@/hooks/use-prefers-reduced-motion";
 
@@ -58,6 +59,7 @@ export default function ProjectsPage() {
                 className="group block relative aspect-video rounded-2xl overflow-hidden bg-white/5 border border-white/10 focus-ring"
                 data-hover="true"
               >
+                <ProjectInProgressBadge isCompleted={project.isCompleted} />
                 <div className="absolute inset-0 transition-transform duration-700 ease-out group-hover:scale-[1.03]">
                   <ProjectImage
                     src={project.image}
